@@ -1,6 +1,6 @@
 .row-header{
-    margin:0px auto;
-    padding:0px;
+    margin:1px auto;
+    padding:20px;
 }
 
 .row-content {
@@ -41,4 +41,7 @@ body{
 }
 .color{
     background-color: orange;
+}
+.bad{
+    padding:  5px 5px 5px 5px;
 }
