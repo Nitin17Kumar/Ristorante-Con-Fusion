@@ -142,8 +142,8 @@
                                         6
                                       </label>
                                 </div>
-                                <div>
-                                    <label for="date and time" class="col-12 col-md-4 col-form-label"><strong class="cen">Section</strong> </label>
+                                <div class="bad">
+                                    <label for="Section" class="col-12 col-md-4 col-form-label"><strong class="cen">Section</strong> </label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-success active">
                                             <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
@@ -216,7 +216,17 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                             <span class="fa fa-pause"></span>pause
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>play
+                        </button>
+                    </div>
                 </div> 
+                
+   
             </div>
         </div>
         <div class="row row-content align-item-center">
@@ -322,9 +332,16 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
         });
     </script>
+
 </body>
 
 </html>
